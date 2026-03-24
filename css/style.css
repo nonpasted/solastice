@@ -396,11 +396,11 @@ nav {
   position: relative;
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  transition: background 0.22s;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 .feat-card:nth-child(even)                       { border-right: none; }
 .feat-card:nth-last-child(-n+2)                  { border-bottom: none; }
-.feat-card:hover                                 { background: var(--surface2); }
+.feat-card:hover                                 { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(0,0,0,0.35); z-index: 1; }
 
 .feat-num {
   position: absolute;
