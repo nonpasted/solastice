@@ -42,45 +42,6 @@ body::before {
   z-index: 9999;
 }
 
-/* ── TICKER ── */
-.ticker-bar {
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-  padding: 7px 0;
-  overflow: hidden;
-  position: relative;
-  z-index: 101;
-}
-.ticker-track {
-  display: flex;
-  gap: 60px;
-  animation: ticker 34s linear infinite;
-  white-space: nowrap;
-  width: max-content;
-}
-.ticker-item {
-  font-family: 'Geist Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.08em;
-  color: var(--muted);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.t-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-.t-dot.green  { background: var(--green);  box-shadow: 0 0 5px var(--green); }
-.t-dot.red    { background: var(--red);    box-shadow: 0 0 5px var(--red); }
-.t-dot.yellow { background: var(--yellow); box-shadow: 0 0 5px var(--yellow); }
-
-@keyframes ticker {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
 /* ── NAV ── */
 nav {
   position: sticky;

@@ -71,32 +71,6 @@ document.querySelectorAll('.faq-item').forEach(item => {
   });
 });
 
-/* ── LIVE STATUS TICKER DATA ── */
-const tickerMessages = [
-  { dot: 'green',  text: 'AIMBOT: Online — mostly pointing at things' },
-  { dot: 'red',    text: 'ANTICHEAT BYPASS: Bypassed (by anticheat)' },
-  { dot: 'yellow', text: 'ESP: Rendering ±3 seconds off — adding character' },
-  { dot: 'green',  text: 'SERVERS: Running, do not look at them directly' },
-  { dot: 'red',    text: 'DETECTION STATUS: Detected since February' },
-  { dot: 'yellow', text: 'CONFIG MENU: Exists. Does things. Unknown things.' },
-  { dot: 'green',  text: 'INJECTION: Drag and drop. Works sometimes.' },
-  { dot: 'red',    text: 'LAST BAN WAVE: 3 days ago. Good luck.' },
-  { dot: 'yellow', text: 'UPDATE STATUS: Soon™' },
-  { dot: 'green',  text: 'SUPPORT TEAM: Reading tickets. Not responding.' },
-];
-
-function buildTicker() {
-  const track = document.getElementById('ticker-track');
-  const doubled = [...tickerMessages, ...tickerMessages]; // duplicate for seamless loop
-  track.innerHTML = doubled.map(m => `
-    <span class="ticker-item">
-      <span class="t-dot ${m.dot}"></span>
-      ${m.text}
-    </span>
-  `).join('');
-}
-buildTicker();
-
 
 /* keyboard close */
 document.addEventListener('keydown', e => {
