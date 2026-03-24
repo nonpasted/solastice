@@ -97,15 +97,6 @@ function buildTicker() {
 }
 buildTicker();
 
-/* ── LIVE USER COUNT (fake) ── */
-const countEl = document.getElementById('live-count');
-if (countEl) {
-  let base = 2847;
-  setInterval(() => {
-    base += Math.floor(Math.random() * 3) - 1;
-    countEl.textContent = base.toLocaleString();
-  }, 3500);
-}
 
 /* keyboard close */
 document.addEventListener('keydown', e => {
